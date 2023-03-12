@@ -1,0 +1,649 @@
+Introduction
+
+What is Programming?
+Programming is the way to instruct the computer to perform a  various task
+
+what is python?
+python is general purpose high level programming language.
+
+Feature of python
+	-Easy to understand
+	-open source
+	-high level
+	-portable-(os/platform independent)
+	-Functional as well as Object oriented
+	
+	
+Installation-(Python and Pycharm)
+https://www.python.org/downloads/
+https://www.jetbrains.com/pycharm/download/#section=windows	
+
+-------------------------------------------------------------------------------------	
+Basic-
+
+What is module?
+ a file contains python code is knows as module
+ In python we have myltiple in built module to perform different operation.and to interpretate code. 
+comments -
+comments are the line in code which are not going to execute with code lines.
+we can use that lines to give information about code.
+we can use # to made comment
+we can use """,''' to made comments
+-----------------------------------------------------------------------------------------
+basic -
+
+Identifier-
+ a name in python program is called identifier
+ (for function, class or variable.)
+ Rules for identifier-
+ 1.alfanumeric or alfabetic e.g (d12 = 50 , a=10, rohit = 50,vishal = "Good")
+ 
+ 2.we can use _ in identifier e.g(d_ = 70, _a=30 )
+ identifier can start with "_"
+ 
+ 3. we can not start Identifier with number. e.g (12ab = 70   #this not valid identifer)
+ 
+ 4. we can not use special character in identifier e.g ($,%,&)
+ 
+ 5 we can not use space while defining identifer. e.g (va dr = 7  # this is not valid identifer)
+ 
+ 6.we can not use python keywords as a identifer. 
+ 
+ Keywords-
+ we have 35 keywords-
+   ( True, False,None
+     and, or, not,is,
+     if,else,elif,
+	 while, for ,break, continue,in 
+	 return,yeild,
+	 try,except,finally,raise,assert,
+	 import,from,as,
+	 class,def,pass, HDFC0002455 
+	 global,nonlocal,lambda,
+	 del,with,
+	 async,await
+   )
+-----------------------------------------------------------------------------   
+Datatype-
+a = 1
+type(a)
+<class 'int'>
+
+b=1.2
+type(b)
+<class 'float'>
+
+c = True
+type(c)
+<class 'bool'>
+
+d = 10+5j
+type(d)
+<class 'complex'>
+
+e = "VR"
+type(e)
+<class 'str'>
+
+f = [1,2,3], f= [1,"shiv",7.2]
+type(f)
+<class 'list'>
+
+g = (4,5,6), g =(1,"raj",8.2)
+type(g)
+<class 'tuple'>
+
+h ={"a":1,"b":2}
+type(h)
+<class 'dict'>
+
+i = {1,2,3}
+type(i)
+<class 'set'>
+
+j = frozenset(i)
+type(j)
+<class 'frozenset'>
+
+k = range(15)
+type(k)
+<class 'range'>
+
+l=None
+type(l)
+<class 'NoneType'>
+
+
+
+"Python is dynamically typed language"
+------------------------------------------------------------------------
+Type casting and methods available
+
+1)int- data
+
+1
+binary number- 0b0010,0B0001 - bin()
+Octal number- 0o12, 0O12 - oct()
+hexa number -0x1256,0X1279 - hex()
+
+
+2)float- data
+1.3
+
+3)Complex- data
+ c = 10+6j
+ d = 0b0010 +6j
+ 
+4)string-data
+a= "shiv"
+a='shiv'
+a='''shiv
+      raj
+	  kadam'''
+	  
+b= "Sitaram" --lenght(7)
+Slice operator--[srt_ind:end_ind]
+srt_ind--include
+end_ind--exclide
+S   i  t  a  r  a  m
+0   1  2  3  4  5  6 ---positive indexing
+-7 -6 -5 -4 -3 -2 -1 ---negative indexing
+slice operator with skip value(step)--[str_ind:end_ind:skip_value]
+
+method used for string
+
+1)len()--returs lenght of string
+2)string.endswith("m")-- checks string is ending with given argument and returns result in true or false.
+3)string.lower() -- make all char in lower case
+4)string.upper() -- make all char in upper case
+-----------------------------------------------------------------------------------------------------
+type casting continue--
+
+1)datatype conversion into int --using int()
+int("10")--valid argument-string of number
+int(1.2)-- valid argument -float number can be converted into int
+int(True)-- Valid argument -Bool value can be converted into int
+
+int(10+7j)- Not Valid argument -Complex number can not be converted into int
+int("a") --Not valid argument string of char cannot be converted into int
+
+2)datatype conversion into int --using float()
+float("10")--valid argument-string of number
+float(10)-- valid argument -int number can be converted into float
+float(True)-- Valid argument -Bool value can be converted into int
+
+float(10+7j)- Not Valid argument -Complex number can not be converted into float
+float("a") --Not valid argument string of char cannot be converted into float
+
+3)datatype conversion into int --using str()
+all datatype can be converted into string using str() method
+str(10)
+str(1.2)
+str(10+3j)
+str(True)
+
+4)datatype conversion into int --using complex()
+complex(10) -valid argument -interger can be converted into complex number
+complex("10")--valid argument-string of number can be converted into complex
+complex(1.2)-- valid argument -float number can be converted into complex
+complex(True)-- Valid argument -Bool value can be converted into complex
+
+
+complex("a") --Not valid argument string of char cannot be converted into complex
+
+5) Method used for converting any number into another
+bin()-this method convert given number into binary
+oct()-this method convert given number into octal
+hex()-this method convert given number into hex
+-------------------------------------------------------------------------------------
+1)List-
+python list is a container/collection of comma seperated values
+we can define list with []
+
+using list() method we can create or convert any collection into list
+
+l = [1,2,3]
+l2 = ["a","b"]
+l3 = [1,"a",10+7j]
+
+list((1,2,3))--Tuple can be converted into list
+list({"a":1,"b":2})-If we give dictionary as argument to list method it will return list of keys only
+list({1,2,3}) -Set can be converted into List
+list(frozenset({1,2,3}) -Frozenset can be converted into list
+
+
+l = [1,2,3]
+     0 1 2 --- +ve indexing
+	-3-2-1 --- -ve indexing
+methods of list:
+l = [1,2,3] l1 = ["a","b","c"]
+l.append(4) - adds 4 at the end of list
+l.sort() - update list in sorted order
+l.reverse()- reverse order of list item
+l.extend(l1) - add every item from list(l1) given in argument in list (l)
+l.insert(index_number, item) - insert/add item in list at given index_number
+---------------------------------------------------------------------------------------------------
+Tuple and method:
+
+A tuple is a collection of values seperated by comma and defined in ()
+tuple is an immutable(we can not change into tuple) data type in python
+
+using tuple() method we can create or convert any collection into list
+
+t=()
+methods for Tuple
+t.count(item)--this method returns the count of given item in Tuple
+t.index(item)--this meyhod returns index of given item
+
+len(t) --will return lenght of tuple
+max(t) --will return largest item from tuple
+min(t) --will return smallest item from tuple
+sum(t) --will return summation of item from tuple
+
+-----------------------------------------------------------------------------------------------
+dictionary and its method-
+
+dictionary is collection of key-value pair.
+d={"a":1,"b":2}
+
+using dict() method we can create dectionary
+
+features:
+1.mutale
+2.unorders
+3.key indexed
+4.can not contains duplicate key
+
+methods
+1 d.items()-returns listof( key ,value) tuple
+2 d.keys() -returns list of keys
+3 d.update({"e":7,"f":9}) - returns updated dictionary
+3 d["key"]=Value - if key is not present then this will add a new key in our dictionary with assigned value 
+                   else this will update value of existing key
+4d.clear()--will delete all key-value present in dictionary
+5 del(d) -will delete dictionary
+6len(d) - will return number of keys
+7d.get("key") - if key is present will return value of key else if key not present it will return "None"
+8d.get("key","default_value") - if key is present will return value of key else if key not present it will return "default_value"
+---------------------------------------------------------------------------------------------------------------------------------------
+set and Frozenset/Operators:
+
+set is collection of unique /non duplicate items
+s={1,2,3}
+
+features-
+1.set is unordered
+2.set is unindexed
+3.set is mutable
+4.set cannot contains duplicate values/items
+
+
+methods of set
+1 s.add("item") - adding item in set
+2 s.remove("item") - removing item from set
+3 s.union(s1) - getting all value from 2 sets
+3 s.intersection - getting common valuess/items from 2 sets
+------------------------------------------------------------------------------------
+frozenset
+
+similar as set but immutable
+s = {1,2,3}
+fs = frozenset(s)
+fs1 = frozenset({7,8,9})
+
+methods
+1 fs.union(s)- getting all value from 2 sets
+2 fs.intersection(s) getting common valuess/items from 2 sets
+--------------------------------------------------------------------------------
+operator---
+1)Arithmatic - +,-,*,/,//-->(floor division),%--(Modulo)
+2)Relational operator/Comparision  >,<,>=,<=
+3)Logical operators---and,or,not
+and ==> multiplication
+True  and  False = False          (1*0 = 0)
+False and  False = False          (0*0 = 0)
+False and  True  = False          (0*1 = 0)
+True  and  True  = True           (1*1 = 1)
+
+or ==> Addition
+True  or  False = True          (1+0 = 1)
+False or  False = False          (0+0 = 0)
+False or  True  = True          (0+1 = 1)
+True  or  True  = True           (1+1 = 1)
+
+not --->Negation
+not True---->False
+not False--->True
+4)Assignment operator ---> =
+-------------------------------------------------------------------------
+operators continue--
+
+5)Identity operators-
+ is --     Return True if given argument Pointing to the same object else returns False
+ is not --- this returns True if given argument not pointing to same object else returns False 
+ 
+6)Membership operators-
+in - Returns True if argument present in collection else returns False
+not in - Returns True if argument not present in collection else returns False
+
+7)Equality operator-
+(Equal to)     == this returns True if given arguments are equal else returns False
+(Not Equal to) != this returns True if given arguments are not equal else returns False
+----------------------------------------------------------------------------
+
+0   0   0   1                 0    0   1   0 
+2^3 2^2 2^1 2^0      <<       2^3 2^2 2^1 2^0           (Left shift)
+
+1                                   2
+
+0   0   0   1                  1    0   0    0 
+2^3 2^2 2^1 2^0      >>       2^3  2^2  2^1 2^0           (Right shift)
+
+1                                      8
+
+~0 1
+~1 0                                  
+
+bitwise and---
+0 & 0 = 0 
+0 & 1 = 0
+1 & 0 = 0
+1 & 1 = 1
+
+bitwise or---
+0 | 0 = 0 
+0 | 1 = 1
+1 | 0 = 1
+1 | 1 = 1
+
+bitwise Xor---
+0 ^ 0 = 0 
+0 ^ 1 = 1
+1 ^ 0 = 1
+1 ^ 1 = 0
+
+
+
+operator precedence-
+
+()        Parenthesis
+**        exponential operator
+~,-       bitwise complement and urnary minus operator
+*,/,%,//  multiplication,division,modulo,floor division
++,-       addition substraction
+<<,>>     Left shift right shift
+&         Bitwise and
+^         Bitwise XOR
+|         Bitwise OR
+>,>=,<,<=,==,!=    Relational operator ,Equality operator
+is ,is not Identity operators
+in ,not in Membership operators
+not, and or Logical operator
+
+-----------------------------------------------------------------------------------------
+****************************************Flow Control**************************************
+
+1)Conditional Statements:
+
+  if condition:
+    statement_1
+	
+  if condition:
+	statement_1
+  else :
+    statement_2
+	
+  if condition1:
+	statement_1
+  elif condition2:
+	statement_2
+  else:
+    default statement
+
+----check given number is even or odd
+
+2)transfer statements:
+
+1)break
+2)continue
+3)pass
+
+3)Iterative statement(Loops)
+
+1)for loop syntax
+
+  for item in collection:
+	statement
+
+Nested loop--example
+
+2)while loop syntax
+  while condition:
+	statement
+---------------------------------------------------------------------------------------------
+python packate manager
+pip
+
+pip install flask ---->using this command we can install any required package(flask)
+
+----------------------------------------------------------------------------------------------
+****************************************Functions*********************************************
+
+bolck of code which only run when it is called
+
+1)type of function:
+	1.Built- in functions
+	2.user defined functions
+	def function_name():
+		statement
+		return xyz
+
+2)parameters
+	1.Positional arg
+	2.Variable lenght argument(variable lenght key-words argument)
+	3.default argument
+	4.key words arguments
+
+3) returns 
+	a)function by default returns None
+	b)return multiple value  
+	c)we can use zero or One time return key word for function.
+4)Vaiables
+	a)local variable
+	b)global variable
+	
+_______________________________________________________________________________________________
+
+1)recursive function:
+	a function calls it self is knows as recursive function
+	
+	
+factorial(n)=n*factorial(n-1)
+
+
+factorial(3)=3*2*1
+factorial(2)=2*1
+factorial(1)=1
+factorial(0)=1
+
+def factorial(n):
+	if n ==0 or n==1:
+		result =  1
+	else:
+		result = n*factorial(n-1)
+	return 	result
+	
+2)Anonymous Function/Lambda function:
+
+	lambda argument_list:expression
+3)Normal:
+	user defined simple function
+	def squareit(x):
+        return x*x
+
+    print(squareit(2))
+	
+4)filter function:
+
+	If we want to filter out items form given sequence we can use filter function
+
+ filter(function,sequence)
+
+5)map function:
+ 
+ If we want to perform some action on every item of given sequence we can use map function
+
+ map(function,sequence)
+
+6)reduce function:
+  To reduce a given sequence into a single item we can use reduce function
+  we need to import reduce function from functools module
+  
+  from functools import reduce
+  reduce(function,sequence)
+****************************************************************************************************
+1)Function aliasing:
+  we can change name of any function using function aliasing
+	a=sum_it
+	a(2,3)
+ 
+2)Nested functions: 
+   a function having function defined inside is called nested function.
+   
+****************************************************************************************************
+Advance Function:
+
+Decorator:
+	decorator extends functionality of other finction:
+	eg:
+def decor_star(func):
+    def inner():
+        print("*" *10)
+        func()
+        print("*" *10)
+    return inner()
+	
+def decor_per(func):
+    def inner():
+        print("%" *10)
+        func()
+        print("%" *10)
+    return inner()	
+
+
+@decor_per
+@decor_star
+def my_name():
+    print("Hey I am shivraj")
+	
+	
+
+@decor_star
+def wish():
+    print("Good morning")
+
+decorator chaning:
+we can use multiple decorator for sunfle function.
+---------------------------------------------------------------------------
+Generator function:
+Generators are the function which generating a sequences
+
+The generator function is the same as normal function having one "yield" keyword in it.
+
+yield returns a sigle item each time of a sequence created.
+
+generator always returns Generator object.
+-------------------------------------------------------------------------------------
+OOPs(Object oriented Programing)
+
+1)Class defination:
+ To create a object we required some model or blue print which is known as class.
+ 
+
+class syntax--
+
+ class Animal:
+    """This is Animal class"""
+	pass
+	
+*)class contains properties
+*)class contains behaviour
+	
+2)use of (self)
+  self is representation of current object
+  
+Variable types:
+1)Instance variable-
+2)static variable
+3)local variable
+
+--object refernce variable is variable assigned to object of class
+
+Method:
+1)Instance method: 
+def sleep(self):
+	pass
+2)classmethod:
+@classmethod
+def myclassmethod(cls):
+	pass
+3)static method:
+@staticmethod
+def mystaticmethod():
+	pass
+
+
+
+3)def __init__(self): constructor method used to declare and assign instance variable.
+
+4)Inheritance: Using properties of parent class into child class is known as inheritance.
+Type of Inheritance:
+	a)Single inheritance: class
+	b)Multiple inheritance
+	c)Multilevel inheritance
+
+
+
+----------------------------------------------------------------------
+Oops-
+1)Polymorphism - poly-many morphism-form 
+2)Abstraction - using method without knowing it's inside codeing behaviour
+3)Encapsulation - Collection of data at single entity
+4)Inheritance - Using parents property.
+----------------------------------------------------------------------
+Try-except-else-finally
+
+syntax:
+
+try:
+	statement
+except:
+	statement_1/log
+else:
+	statement_2
+finally:
+	statement_3
+-----------------------------------------------------------------------
+file handling-
+Python has several function to perform Create,Read,Update,Delete
+
+The open() function takes two agruments Filename and Mode
+There are four different Mode as bellows
+1)"x"- Create- Create a specified files and gives error if file already exists
+2)"w"- Write - Opens a file for writing and if file does not exists then create a file
+3)"r" -Read  - Default -Opens a file for reading,error if file does not exists.
+4)"a" - Append - Opens a file for appending, creates the file if it does not exist
+
+In addition you can specify if the file should be handled as binary or text mode
+a) "t" - Text - Default value. Text mode
+b) "b" - Binary - Binary mode (e.g. images)
+
+
+to create a file in python use open()method with oneof the folling mode
+"x"
+"w"
+"a"
+
+-----------------------------------------------------------------------
+
+
